@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tower of Hanoi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .game-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 50px;
+    }
+
+    .pin {
+      min-height: 300px;
+      width: 150px;
+      background-color: lightgray;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative;
+      border: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    .pin.selected {
+      border-color: blue;
+    }
+
+    .disk {
+      height: 20px;
+      background-color: darkgray;
+      text-align: center;
+      margin: 5px 0;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .button-container {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tower of Hanoi</h1>
+
+  <div class="game-container">
+    <div id="pin1" class="pin"></div>
+    <div id="pin2" class="pin"></div>
+    <div id="pin3" class="pin"></div>
+  </div>
+
+  <div class="button-container">
+    <p id="moves"></p>
+  </div>
+
+  <script type="module" src="tower.js"></script>
+</body>
+</html>
